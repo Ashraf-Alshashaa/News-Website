@@ -47,10 +47,12 @@ _________
 
 #### MUST-HAVE
 
-- [ ] nav-bar has categories links
-- [ ] News cards will have a title, image, date, and link to the details page of the news
-- [ ] details page
+- [x] create header
+- [ ] create Home page
+- [ ] create News cards
+- [ ] create details page
+- [ ] doing style
 
 #### NICE-TO-HAVE
 
-- [ ] Read Later feature
+- [ ] create read Later feature

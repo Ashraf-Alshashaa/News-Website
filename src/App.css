@@ -1,1 +1,27 @@
+.App-header {
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+  padding: 0 40px;
+  height: 100px;
+}
 
+.logo {
+  text-decoration: none;
+  color: black;
+}
+
+.category-link,
+.read-later-link {
+  margin-left: 10px;
+  width: 160px;
+  font-size: 12px;
+  border: none;
+  padding: 5px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
