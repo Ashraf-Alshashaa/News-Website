@@ -39,6 +39,7 @@ _________
         |   |____App.js
         |   |____DetailsPage.js
         |   |____Header.js
+        |   |____HomePage.js
         |   |____index.js
         |   |____NewsCard.js
         |   |____NewsPage.js
@@ -52,7 +53,7 @@ _________
 #### MUST-HAVE
 
 - [x] create header
-- [ ] create Home page
+- [x] create Home page
 - [x] create News cards
 - [x] create details page
 - [ ] doing style

@@ -8,7 +8,7 @@ const useFetch = (url) => {
   useEffect(() => {
     (async () => {
       setIsLoading(true);
-      const data = await fetchData(url);
+      const data = await fetchData(url, { credentials: "omit" });
       try {
         setData(data);
         setStatus(200);
