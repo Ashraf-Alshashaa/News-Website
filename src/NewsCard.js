@@ -8,7 +8,7 @@ const NewsCart = (props) => {
       <img src={data.imageUrl} alt={data.title} />
       <time>{data.date}</time>
       <h2>{data.title}</h2>
-      <Link className="link" to={`/details/${data.id}`}>
+      <Link className="link" to={`/details/${data.id}`} state={data}>
         read more
       </Link>
     </div>

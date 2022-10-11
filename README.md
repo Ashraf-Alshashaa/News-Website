@@ -37,7 +37,11 @@ _________
         |   |
         |   |____App.css
         |   |____App.js
+        |   |____DetailsPage.js
+        |   |____Header.js
         |   |____index.js
+        |   |____NewsCard.js
+        |   |____NewsPage.js
         |
         |____.gitignore
         |____package-lock.json
@@ -50,7 +54,7 @@ _________
 - [x] create header
 - [ ] create Home page
 - [x] create News cards
-- [ ] create details page
+- [x] create details page
 - [ ] doing style
 
 #### NICE-TO-HAVE

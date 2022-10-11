@@ -25,7 +25,7 @@
   text-decoration: none;
   color: black;
 }
-main {
+.news-page-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 20px;
@@ -47,4 +47,28 @@ main {
 .card img {
   width: 100%;
   max-height: 150px;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.details-container article {
+  display: flex;
+  align-items: center;
+}
+
+.details-img-container {
+  flex: 1;
+  text-align: center;
+}
+.details-img-container img {
+  max-width: 300px;
+}
+
+.details-container section {
+  flex: 1;
 }

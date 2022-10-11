@@ -11,7 +11,7 @@ const NewsPage = () => {
   return isLoading ? (
     <h2 className="loading">Loading...</h2>
   ) : status === 200 ? (
-    <main>
+    <main className="news-page-container">
       <h2 className="category-title">{data.category}</h2>
       {data.data.map((news) => (
         <NewsCart props={news} key={news.id} />
