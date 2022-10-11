@@ -49,7 +49,7 @@ _________
 
 - [x] create header
 - [ ] create Home page
-- [ ] create News cards
+- [x] create News cards
 - [ ] create details page
 - [ ] doing style
 
