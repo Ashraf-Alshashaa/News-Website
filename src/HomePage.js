@@ -11,19 +11,20 @@ const HomePage = () => {
   ) : status === 200 ? (
     <main className="home-page-container">
       <article className="articles-container">
-        {data.data.map((news, idx) =>
-          idx < 6 ? (
-            <Link
-              to={`/details/${news.id}`}
-              state={news}
-              key={news.id}
-              id={"article" + idx}
-              className={"article"}
-            >
-              <img src={news.imageUrl} alt={news.title} />
-              <h5 className={"title" + idx}>{news.title}</h5>
-            </Link>
-          ) : null
+        {data.data.map(
+          (news, idx) =>
+            idx < 6 && (
+              <Link
+                to={`/details/${news.id}`}
+                state={news}
+                key={news.id}
+                id={"article" + idx}
+                className={"article"}
+              >
+                <img src={news.imageUrl} alt={news.title} />
+                <h5 className={"title" + idx}>{news.title}</h5>
+              </Link>
+            )
         )}
       </article>
     </main>

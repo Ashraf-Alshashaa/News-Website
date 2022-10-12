@@ -43,6 +43,8 @@ _________
         |   |____index.js
         |   |____NewsCard.js
         |   |____NewsPage.js
+        |   |____readLaterContext.js
+        |   |____ReadLaterPage.js
         |
         |____.gitignore
         |____package-lock.json
@@ -52,12 +54,12 @@ _________
 
 #### MUST-HAVE
 
-- [x] create header
+- [x] create Header
 - [x] create Home page
 - [x] create News cards
-- [x] create details page
+- [x] create Details page
 - [ ] doing style
 
 #### NICE-TO-HAVE
 
-- [ ] create read Later feature
+- [x] create Read later feature

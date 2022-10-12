@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NewsPage from "./NewsPage";
 import DetailsPage from "./DetailsPage";
 import HomePage from "./HomePage";
+import ReadLaterPage from "./ReadLaterPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,7 +15,7 @@ root.render(
         <Route path="/" element={<HomePage />} />
         <Route path="/:category" element={<NewsPage />} />
         <Route path="/details/:id" element={<DetailsPage />} />
-        <Route path="/readLater" element={<h1>Read later page</h1>} />
+        <Route path="/readLater" element={<ReadLaterPage />} />
       </Route>
     </Routes>
   </Router>

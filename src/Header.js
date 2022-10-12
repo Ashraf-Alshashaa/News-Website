@@ -27,7 +27,7 @@ const Header = () => {
       </Link>
       <div>{items}</div>
       <Link to={"/readLater"} className="read-later-link">
-        read later
+        Read later
       </Link>
     </header>
   );

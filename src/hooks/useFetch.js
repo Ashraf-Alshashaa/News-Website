@@ -4,11 +4,11 @@ const useFetch = (url) => {
   const [data, setData] = useState([]);
   const [status, setStatus] = useState();
   const [isLoading, setIsLoading] = useState();
-  const [errorMassage, setErrorMassage] = useState("");
+  const [errorMassage, setErrorMassage] = useState("HTTP Error");
   useEffect(() => {
     (async () => {
       setIsLoading(true);
-      const data = await fetchData(url, { credentials: "omit" });
+      const data = await fetchData(url);
       try {
         setData(data);
         setStatus(200);
