@@ -1,44 +1,49 @@
 import React, { useContext } from "react";
 import { useLocation } from "react-router-dom";
-import { ReadLaterContext } from "./readLaterContext";
+import { ReadLaterContext } from "./contexts/readLaterContext";
 
 const DetailsPage = () => {
-  const [ReadLater, setReadLater] = useContext(ReadLaterContext);
+  const [ReadLater, setItem] = useContext(ReadLaterContext);
   const { state: data } = useLocation();
   const { author, content, date, imageUrl, readMoreUrl, title } = data;
-  console.log(data);
 
   return (
     <main className="details-container">
       <h2>{data.title}</h2>
       <time>{date}</time>
+
+      <div className="details-img-container">
+        <img src={imageUrl} alt={title} />
+      </div>
       <article>
-        <section>
-          <h3>Content</h3>
-          <p>{content}</p>
-          <h6>Author: {author}</h6>
-        </section>
-        <div className="details-img-container">
-          <img src={imageUrl} alt={title} />
-        </div>
+        <h3>Content</h3>
+        <p>{content}</p>
+        <h6>Author: {author}</h6>
       </article>
-      <a href={readMoreUrl} target="blank">
-        read more
-      </a>
-      <button
-        className="read-later-button"
-        onClick={() => {
-          setReadLater((prev) =>
-            !prev.includes(data)
-              ? [...prev, data]
-              : ReadLater.filter((item) => item !== data)
-          );
-        }}
-      >
-        {ReadLater.includes(data)
-          ? "Remove from Read later"
-          : "Add to Read later"}
-      </button>
+      <div className="source-link-container">
+        <a href={readMoreUrl} target="blank" className="source-link">
+          Read more from the source
+        </a>
+      </div>
+      <div className="read-later-button-container">
+        <button
+          onClick={() => {
+            setItem(data);
+          }}
+        >
+          {ReadLater.includes(data) ? (
+            <div>
+              <span>remove from My Article</span>
+              <i className="fa-solid fa-bookmark  fa-2xl"></i>
+            </div>
+          ) : (
+            <div>
+              <span>add to My Article</span>
+              <i className="fa-regular fa-bookmark fa-2xl"></i>
+            </div>
+          )}
+        </button>
+      </div>
     </main>
   );
 };

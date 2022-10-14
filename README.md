@@ -8,21 +8,20 @@
 
 ## Description
 
-You can look through the app at the new news about
+You can look through the app at the new news about business, sports, world, politics, technology, startup and entertainment
 
-- business
-- sports
-- world
-- politics
-- technology
-- startup
-- entertainment
+![view-img](./public/view-images/nwes-website.jpg)
+
+- Click [here](https://grand-bienenstitch-b51d26.netlify.app/) to try out the app
 
 ### project structure
 
 ```
 _________
         |______public
+        |   |
+        |   |____view-images
+        |   |   |____view-image.jpg
         |   |
         |   |____index.html
         |   |____favicon.ico
@@ -35,6 +34,10 @@ _________
         |   |____hooks
         |   |   |____useFetch.js
         |   |
+        |   |____contexts
+        |   |   |____categoriesContext.js
+        |   |   |____readLaterContext.js
+        |   |
         |   |____App.css
         |   |____App.js
         |   |____DetailsPage.js
@@ -43,7 +46,6 @@ _________
         |   |____index.js
         |   |____NewsCard.js
         |   |____NewsPage.js
-        |   |____readLaterContext.js
         |   |____ReadLaterPage.js
         |
         |____.gitignore
@@ -52,14 +54,31 @@ _________
         |____README.md
 ```
 
+### technical information
+
+- Arrow Functions
+- Block-Scope Variables
+- Async await
+- Modules export/import
+- New Built-In Methods
+
+### Frameworks
+
+- react
+- react-router-dom @6
+
 #### MUST-HAVE
 
 - [x] create Header
 - [x] create Home page
 - [x] create News cards
 - [x] create Details page
-- [ ] doing style
+- [x] doing style
+- [ ] check app compatibility with browsers
+- [ ] final quality check
 
 #### NICE-TO-HAVE
 
 - [x] create Read later feature
+- [ ] add buttons for moving between pages
+- [ ] create mobile and tablet footer

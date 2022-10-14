@@ -4,10 +4,17 @@ export const ReadLaterContext = createContext();
 
 export const ReadLaterProvider = (props) => {
   const [ReadLater, setReadLater] = useState([]);
-  console.log("ReadLater", ReadLater);
+
+  const setItem = (data) => {
+    setReadLater((prev) =>
+      !prev.includes(data)
+        ? [...prev, data]
+        : ReadLater.filter((item) => item !== data)
+    );
+  };
 
   return (
-    <ReadLaterContext.Provider value={[ReadLater, setReadLater]}>
+    <ReadLaterContext.Provider value={[ReadLater, setItem]}>
       {props.children}
     </ReadLaterContext.Provider>
   );

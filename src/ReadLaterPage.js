@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ReadLaterContext } from "./readLaterContext";
+import { ReadLaterContext } from "./contexts/readLaterContext";
 import NewsCart from "./NewsCard";
 
 const ReadLaterPage = () => {

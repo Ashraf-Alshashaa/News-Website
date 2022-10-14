@@ -1,13 +1,15 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { ReadLaterContext } from "./readLaterContext";
+import { ReadLaterContext } from "./contexts/readLaterContext";
 
 const NewsCart = (props) => {
-  const [ReadLater, setReadLater] = useContext(ReadLaterContext);
+  const [ReadLater, setItem] = useContext(ReadLaterContext);
   const { props: data } = props;
   return (
     <div className="card">
-      <img src={data.imageUrl} alt={data.title} />
+      <div className="img-card-container">
+        <img src={data.imageUrl} alt={data.title} />
+      </div>
       <time>{data.date}</time>
       <h3>{data.title}</h3>
       <div className="buttons-container">
@@ -17,16 +19,16 @@ const NewsCart = (props) => {
         <button
           className="read-later-button"
           onClick={() => {
-            setReadLater((prev) =>
-              !prev.includes(data)
-                ? [...prev, data]
-                : ReadLater.filter((item) => item !== data)
-            );
+            setItem(data);
           }}
         >
-          {ReadLater.includes(data)
-            ? "Remove from Read later"
-            : "Add to Read later"}
+          <i
+            className={
+              ReadLater.includes(data)
+                ? "fa-solid fa-bookmark  fa-2xl"
+                : "fa-regular fa-bookmark fa-2xl "
+            }
+          ></i>
         </button>
       </div>
     </div>
