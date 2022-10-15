@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { CategoriesContext } from "./contexts/categoriesContext";
+import { CategoriesContext } from "../contexts/categoriesContext";
 
 const Header = () => {
   const [isCategoriesList, setIsCategoriesList] = useState(false);

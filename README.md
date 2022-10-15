@@ -80,5 +80,5 @@ _________
 #### NICE-TO-HAVE
 
 - [x] create Read later feature
-- [ ] add buttons for moving between pages
+- [x] add buttons for moving between pages
 - [ ] create mobile and tablet footer

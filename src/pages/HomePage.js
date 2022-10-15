@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import useFetch from "./hooks/useFetch";
+import useFetch from "../hooks/useFetch";
 import { Link } from "react-router-dom";
-import { CategoriesContext } from "./contexts/categoriesContext";
+import { CategoriesContext } from "../contexts/categoriesContext";
 
 const HomePage = () => {
   const [categories] = useContext(CategoriesContext);

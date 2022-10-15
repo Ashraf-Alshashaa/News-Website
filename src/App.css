@@ -331,6 +331,19 @@ main::-webkit-scrollbar {
   text-align: center;
 }
 
+.news-page-buts-container {
+  grid-column: span 12;
+  display: flex;
+  justify-content: space-between;
+}
+
+.news-page-buts-container button {
+  width: 100px;
+  height: 40px;
+  border: none;
+  background-color: #0099dd;
+}
+
 .card {
   grid-column: span 4;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,

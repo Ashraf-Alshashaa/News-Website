@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { ReadLaterContext } from "./contexts/readLaterContext";
+import { ReadLaterContext } from "../contexts/readLaterContext";
 
 const NewsCart = (props) => {
   const [ReadLater, setItem] = useContext(ReadLaterContext);

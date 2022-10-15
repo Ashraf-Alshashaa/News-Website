@@ -2,10 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import NewsPage from "./NewsPage";
-import DetailsPage from "./DetailsPage";
-import HomePage from "./HomePage";
-import ReadLaterPage from "./ReadLaterPage";
+import NewsPage from "./pages/NewsPage";
+import DetailsPage from "./pages/DetailsPage";
+import HomePage from "./pages/HomePage";
+import ReadLaterPage from "./pages/ReadLaterPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

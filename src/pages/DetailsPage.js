@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { useLocation } from "react-router-dom";
-import { ReadLaterContext } from "./contexts/readLaterContext";
+import NavigateButtons from "../components/NavigateButtons";
+import { ReadLaterContext } from "../contexts/readLaterContext";
 
 const DetailsPage = () => {
   const [ReadLater, setItem] = useContext(ReadLaterContext);
@@ -9,6 +10,7 @@ const DetailsPage = () => {
 
   return (
     <main className="details-container">
+      {window.innerWidth > 820 && <NavigateButtons />}
       <h2>{data.title}</h2>
       <time>{date}</time>
 
