@@ -31,6 +31,12 @@ _________
         |
         |______src
         |   |
+        |   |____components
+        |   |   |____Header.js
+        |   |   |____NavigateButtons.js
+        |   |   |____NewsCard.js
+        |   |   |____SmallFooter.js
+        |   |
         |   |____hooks
         |   |   |____useFetch.js
         |   |
@@ -38,15 +44,15 @@ _________
         |   |   |____categoriesContext.js
         |   |   |____readLaterContext.js
         |   |
+        |   |____pages
+        |   |   |____DetailsPage.js
+        |   |   |____HomePage.js
+        |   |   |____NewsPage.js
+        |   |   |____ReadLaterPage.js
+        |   |
         |   |____App.css
         |   |____App.js
-        |   |____DetailsPage.js
-        |   |____Header.js
-        |   |____HomePage.js
         |   |____index.js
-        |   |____NewsCard.js
-        |   |____NewsPage.js
-        |   |____ReadLaterPage.js
         |
         |____.gitignore
         |____package-lock.json
@@ -81,4 +87,4 @@ _________
 
 - [x] create Read later feature
 - [x] add buttons for moving between pages
-- [ ] create mobile and tablet footer
+- [x] create mobile and tablet footer

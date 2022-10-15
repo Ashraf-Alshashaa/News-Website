@@ -14,7 +14,9 @@ const NewsPage = () => {
   ) : status === 200 ? (
     <main className="news-page-container">
       <h2 className="category-title">{data.category}</h2>
-      {window.innerWidth > 820 && <NavigateButtons />}
+      {window.innerWidth > 820 && (
+        <NavigateButtons textContent={{ back: "back", forward: "forward" }} />
+      )}
       {data.data.map((news) => (
         <NewsCart props={news} key={news.id} />
       ))}

@@ -489,7 +489,7 @@ time {
   margin-left: 20px;
 }
 
-/*-- footer --*/
+/*-- footers --*/
 
 footer {
   height: 5vh;
@@ -503,6 +503,28 @@ footer {
   justify-content: center;
   color: whitesmoke;
   z-index: 999;
+}
+
+.small-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.small-footer div {
+  flex: 1, 1, 50%;
+}
+.small-footer button {
+  color: whitesmoke;
+  background-color: #08283e;
+  width: auto;
+  height: auto;
+  padding: 0 20px !important;
+}
+.small-footer i {
+  color: whitesmoke;
+  flex: 1, 1, 50%;
+  padding-right: 20px !important;
+  font-size: large !important;
 }
 
 @media only screen and (max-width: 1240px) {
