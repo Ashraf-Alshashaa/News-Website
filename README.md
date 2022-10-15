@@ -74,7 +74,7 @@ _________
 - [x] create News cards
 - [x] create Details page
 - [x] doing style
-- [ ] check app compatibility with browsers
+- [x] check app compatibility with browsers
 - [ ] final quality check
 
 #### NICE-TO-HAVE
