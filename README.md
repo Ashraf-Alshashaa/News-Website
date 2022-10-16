@@ -10,7 +10,7 @@
 
 You can look through the app at the new news about business, sports, world, politics, technology, startup and entertainment
 
-![view-img](./public/view-images/nwes-website.jpg)
+![view-img](./public/view-images/news-website.jpg)
 
 - Click [here](https://grand-bienenstitch-b51d26.netlify.app/) to try out the app
 
@@ -22,6 +22,7 @@ _________
         |   |
         |   |____view-images
         |   |   |____view-image.jpg
+        |   |   |____err.png
         |   |
         |   |____index.html
         |   |____favicon.ico
@@ -32,9 +33,11 @@ _________
         |______src
         |   |
         |   |____components
+        |   |   |____CategoriesNavList.js
         |   |   |____Header.js
         |   |   |____NavigateButtons.js
         |   |   |____NewsCard.js
+        |   |   |____ReadLaterButton.js
         |   |   |____SmallFooter.js
         |   |
         |   |____hooks
@@ -45,6 +48,7 @@ _________
         |   |
         |   |____pages
         |   |   |____DetailsPage.js
+        |   |   |____ErrPage.js
         |   |   |____HomePage.js
         |   |   |____NewsPage.js
         |   |   |____ReadLaterPage.js
