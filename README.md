@@ -12,7 +12,7 @@ You can look through the app at the new news about business, sports, world, poli
 
 ![view-img](./public/view-images/news-website.jpg)
 
-- Click [here](https://grand-bienenstitch-b51d26.netlify.app/) to try out the app
+- Click [here](https://news-website-ashraf.netlify.app/) to try out the app
 
 ### project structure
 
@@ -84,7 +84,7 @@ _________
 - [x] create Details page
 - [x] doing style
 - [x] check app compatibility with browsers
-- [ ] final quality check
+- [x] final quality check
 
 #### NICE-TO-HAVE
 
