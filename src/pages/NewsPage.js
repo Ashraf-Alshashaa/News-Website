@@ -7,11 +7,11 @@ import NavigateButtons from "../components/NavigateButtons";
 const NewsPage = () => {
   const { category } = useParams();
   const url = `https://inshorts.deta.dev/news?category=${category}`;
-  const { data, status, isLoading, errorMassage } = useFetch(url);
+  const { data, isLoading } = useFetch(url);
 
   return isLoading ? (
     <h2 className="loading">Loading...</h2>
-  ) : status === 200 ? (
+  ) : (
     <main className="news-page-container">
       <h2 className="category-title">{data.category}</h2>
       {window.innerWidth > 820 && (
@@ -21,8 +21,6 @@ const NewsPage = () => {
         <NewsCart props={news} key={news.id} />
       ))}
     </main>
-  ) : (
-    <h2 className="err">{errorMassage}</h2>
   );
 };
 

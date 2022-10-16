@@ -1,35 +1,23 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { ReadLaterContext } from "../contexts/readLaterContext";
+import ReadLaterButton from "./ReadLaterButton";
 
 const NewsCart = (props) => {
-  const [ReadLater, setItem] = useContext(ReadLaterContext);
-  const { props: data } = props;
+  const data = props.props;
+  const { title, imageUrl, date, id } = data;
+
   return (
     <div className="card">
       <div className="img-card-container">
-        <img src={data.imageUrl} alt={data.title} />
+        <img src={imageUrl} alt={title} />
       </div>
-      <time>{data.date}</time>
-      <h3>{data.title}</h3>
+      <time>{date}</time>
+      <h3>{title}</h3>
       <div className="buttons-container">
-        <Link className="link" to={`/details/${data.id}`} state={data}>
+        <Link className="link" to={`/details/${id}`} state={data}>
           Show details
         </Link>
-        <button
-          className="read-later-button"
-          onClick={() => {
-            setItem(data);
-          }}
-        >
-          <i
-            className={
-              ReadLater.includes(data)
-                ? "fa-solid fa-bookmark  fa-2xl"
-                : "fa-regular fa-bookmark fa-2xl "
-            }
-          ></i>
-        </button>
+        <ReadLaterButton props={{ data: data, innerText: null }} />
       </div>
     </div>
   );

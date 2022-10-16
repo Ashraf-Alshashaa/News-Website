@@ -1,33 +1,31 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const useFetch = (url) => {
+  const navigate = useNavigate();
   const [data, setData] = useState([]);
-  const [status, setStatus] = useState();
   const [isLoading, setIsLoading] = useState(true);
-  const [errorMassage, setErrorMassage] = useState("HTTP Error");
+
   useEffect(() => {
     (async () => {
       setIsLoading(true);
-      const data = await fetchData(url);
       try {
-        setData(data);
-        setStatus(200);
+        const response = await fetchData(url);
+        setData(response);
         setIsLoading(false);
       } catch (error) {
-        console.log(error);
-        setStatus(404);
-        setIsLoading(false);
-        setErrorMassage(error);
+        navigate("/err", { replace: true });
       }
     })();
-  }, [url]);
-  return { data, status, isLoading, errorMassage };
+  }, [navigate, url]);
+  return { data, isLoading };
 };
 
 const fetchData = async (url) => {
   const response = await fetch(url);
-  if (response.status === 200) {
-    return response.json();
+  if (response.ok) {
+    const data = await response.json();
+    return data;
   }
   throw new Error("HTTP Error");
 };

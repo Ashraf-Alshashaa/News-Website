@@ -41,7 +41,6 @@ _________
         |   |   |____useFetch.js
         |   |
         |   |____contexts
-        |   |   |____categoriesContext.js
         |   |   |____readLaterContext.js
         |   |
         |   |____pages

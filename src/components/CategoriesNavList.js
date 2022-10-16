@@ -1,9 +1,11 @@
-import React, { createContext } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 
-export const CategoriesContext = createContext();
+const CategoriesNavList = (props) => {
+  const { name, Id, Key, textContainer, containerName, setIsCategoriesList } =
+    props.props;
 
-export const CategoriesProvider = (props) => {
-  const Categories = [
+  const categories = [
     {
       category: "business",
       icon: <i className="fa-sharp fa-solid fa-business-time"></i>,
@@ -35,8 +37,25 @@ export const CategoriesProvider = (props) => {
   ];
 
   return (
-    <CategoriesContext.Provider value={[Categories]}>
-      {props.children}
-    </CategoriesContext.Provider>
+    <div
+      className={containerName}
+      onClick={(e) => {
+        e.target.className === "category-link" && setIsCategoriesList(false);
+      }}
+    >
+      {categories.map(({ category, icon }, idx) => (
+        <Link
+          key={category + Key}
+          className={name}
+          to={`/${category}`}
+          id={Id + idx}
+        >
+          {icon}
+          {textContainer ? <h2>{category}</h2> : category}
+        </Link>
+      ))}
+    </div>
   );
 };
+
+export default CategoriesNavList;

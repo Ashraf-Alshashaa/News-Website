@@ -1,19 +1,27 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { CategoriesContext } from "../contexts/categoriesContext";
+import CategoriesNavList from "./CategoriesNavList";
 
 const Header = () => {
   const [isCategoriesList, setIsCategoriesList] = useState(false);
-  const [categories] = useContext(CategoriesContext);
 
-  const categoriesNavItems = categories.map(({ category, icon }) => {
-    return (
-      <Link key={category} className="category-link" to={`/${category}`}>
-        {icon}
-        {category}
-      </Link>
-    );
-  });
+  const catagoriesDesktopProps = {
+    name: "category-link",
+    Id: "categories-Desktop",
+    Key: "navDesktop",
+    textContainer: false,
+    containerName: "categories-nav-container",
+    setIsCategoriesList: setIsCategoriesList,
+  };
+
+  const catagoriesMobileProps = {
+    name: "category-link",
+    Id: "categories-home",
+    Key: "navMobile",
+    textContainer: false,
+    containerName: `${!isCategoriesList ? "nonvisible" : "visible"}`,
+    setIsCategoriesList: setIsCategoriesList,
+  };
 
   return (
     <header className="App-header">
@@ -21,7 +29,7 @@ const Header = () => {
         <h1>News Website</h1>
       </Link>
       {window.innerWidth > 820 ? (
-        <div className="categories-nav-container">{categoriesNavItems}</div>
+        <CategoriesNavList props={catagoriesDesktopProps} />
       ) : (
         <div className="nav-list-but-container">
           <button
@@ -42,14 +50,7 @@ const Header = () => {
           My Articles
         </Link>
       </div>
-      <div
-        onClick={(e) => {
-          e.target.className === "category-link" && setIsCategoriesList(false);
-        }}
-        className={!isCategoriesList ? "nonvisible" : "visible"}
-      >
-        {categoriesNavItems}
-      </div>
+      <CategoriesNavList props={catagoriesMobileProps} />
     </header>
   );
 };

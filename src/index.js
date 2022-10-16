@@ -16,6 +16,10 @@ root.render(
         <Route path="/:category" element={<NewsPage />} />
         <Route path="/details/:id" element={<DetailsPage />} />
         <Route path="/readLater" element={<ReadLaterPage />} />
+        <Route
+          path="/err"
+          element={<h2 className="err"> Some thing wrong happened </h2>}
+        />
       </Route>
     </Routes>
   </Router>
